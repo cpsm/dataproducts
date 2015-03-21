@@ -1,0 +1,78 @@
+---
+title       : Data Products Assignment Project
+subtitle    : Design and Performance of automobiles
+author      : Simon
+job         : Student Developing data products cours
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+## Introduction
+
+ * Data from 1974 Motor Trend US Magazine to compare 10 aspects of automoile design
+   and performance is stored in mtcars data
+
+*  Data consists of design and pertormance of 32 automobile during the year(1973-74)
+
+*  The variables  are as follows
+       1  Miles/(US) gallon
+       2  Number of cylinder
+       3  Displacement (cu.in.)
+       4  Gross horsepower
+       5  Rear axle ratio
+       6  Weight (lb/1000)
+       7  1/4 mile time
+       8  V/S
+       9  Transmission (0 = automatic, 1 = manual)
+       10 Number of forward gears
+       11 Number of carburetors
+
+
+--- .class #id 
+
+## Data Summary
+
+#### Summary of the data objects 
+
+```{r,echo=FALSE}
+library(datasets)
+
+dim(mtcars)
+
+summary(mtcars)
+
+```
+
+--- .class #id 
+
+## Regression model
+
+#### Estimate the relationship the exists between the dependent variable and exploratory variable
+```{r,echo=FALSE}
+
+fit <- glm(mpg~.,data=mtcars)
+
+summary(fit)
+
+```
+
+
+
+
+--- .class #id 
+
+
+## Residual Summary
+
+```{r,echo=FALSE}
+
+gfit <- glm(mpg~.,data=mtcars)
+
+par(mfrow=c(2,2))
+plot(gfit)
+
+
+--- .class #id 
