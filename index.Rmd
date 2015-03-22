@@ -2,7 +2,7 @@
 title       : Data Products Assignment Project
 subtitle    : Design and Performance of automobiles
 author      : Simon
-job         : Student Developing data products course
+job         : Student Developing data products cours
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
